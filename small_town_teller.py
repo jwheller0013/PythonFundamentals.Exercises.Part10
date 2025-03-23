@@ -36,10 +36,12 @@ class Bank:
 #
 # jim = Person(1, "jim", "jimson")
 # test_bank.add_customer(jim)
+# test_bank.add_customer(jim) #works for value error
 # print(jim.id)
 # print(test_bank.customers)
 #
 # jim_check = Account(1, "checking", jim, 0.0)
 # print(jim_check.number)
 # test_bank.add_account(jim_check)
+# test_bank.add_account(jim_check) #works for value error
 # print(test_bank.accounts)
