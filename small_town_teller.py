@@ -38,6 +38,13 @@ class Bank:
         else:
             self.accounts = {y: x for y, x in self.accounts.items() if x != account}
 
+    def deposit (self, account_number: int, deposit: float):
+        if account_number in self.accounts:
+            account = self.accounts.get(account_number)
+            account.balance = round(account.balance + deposit, 2)
+        else:
+            raise ValueError(f"Unable to locate account {account_number}.")
+
 # test_bank = Bank()
 #
 # jim = Person(1, "jim", "jimson")
@@ -59,3 +66,5 @@ class Bank:
 # print(test_bank.accounts)
 # test_bank.remove_account(bob_checking)
 # print(test_bank.accounts)
+#
+# test_bank.deposit(1, 10.00)
