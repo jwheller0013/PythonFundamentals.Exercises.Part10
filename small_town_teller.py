@@ -55,6 +55,13 @@ class Bank:
         else:
             raise ValueError(f"Unable to locate account {account_number}.")
 
+    def balance (self, account_number: int) -> float:
+        if account_number in self.accounts:
+            account = self.accounts.get(account_number)
+            return account.balance
+        else:
+            raise ValueError(f"Unable to locate account {account_number}.")
+
 # test_bank = Bank()
 #
 # jim = Person(1, "jim", "jimson")
@@ -79,3 +86,4 @@ class Bank:
 #
 # test_bank.deposit(1, 10.00)
 # test_bank.withdraw(1, 5.00)
+# print(test_bank.balance(1))
